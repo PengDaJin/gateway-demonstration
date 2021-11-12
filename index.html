@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>润建公安项目组网址导航</title>
+  <link rel="stylesheet" href="./circular-menu.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- 1 -->
+  <div class="cons">
+    <main>
+      <video autoplay loop muted>
+        <source src="./images/background.mp4" type="video/mp4" />
+      </video>
+      <img class="imgleft" src="./images/left.png" alt="" />
+      <a href="http://www.runjian.com/">
+        <img class="ljlogo" src="./images/lj-logo.png" alt="" />
+      </a>
+      <img class="logo" src="./images/logo.png" alt="" />
+    </main>
+  </div>
+
+  <!-- 2 -->
+  <div>
+    <div class="biankuang"></div>
+    <div id="circle-menu1" class="cn-menu1"></div>
+  </div>
+  <script src="./circular-menu.js"></script>
+  <script>
+    // 导航标题 链接
+    let menuss = [
+      {
+        title: "巡虎V1（柳州融e巡）",
+        menus: [
+          {
+            title: "开发环境",
+            href: { url: "https://yq.runjian.com:19912/" },
+          },
+        ],
+      },
+      {
+        title: "巡虎V2",
+        click: function (e, data) {
+          console.log(e)
+        },
+        menus: [
+          {
+            title: "开发环境",
+            href: {
+              url: "https://ga-xunhu-dev.runjian.com:19000",
+            },
+          },
+          {
+            title: "测试环境",
+            href: { url: "https://ga-xunhu-test.runjian.com:19000" },
+          },
+          {
+            title: "演示环境",
+            href: { url: "https://ga-xunhu-uat.runjian.com:19000" },
+          },
+          {
+            title: "柳州生产环境",
+            href: { url: "https://lzpolice.runjian.com:8085/" },
+          },
+          {
+            title: "百色生产环境",
+            href: { url: "https://bspolice.runjian.com:13002/" },
+          },
+        ],
+      },
+      {
+        title: "护校平台",
+        menus: [
+          {
+            title: "开发环境",
+            href: { url: "https://ga-huxiao-dev.runjian.com:19000" },
+          },
+          {
+            title: "测试环境",
+            href: { url: "https://ga-huxiao-test.runjian.com:19000" },
+          },
+          {
+            title: "演示环境",
+            href: { url: "https://ga-huxiao-uat.runjian.com:19000" },
+          },
+        ],
+      },
+      {
+        title: "其他",
+        menus: [
+          {
+            title: "百色sop生产环境isv",
+            href: { url: "https://bspolice.runjian.com:23011/isv" },
+          },
+          {
+            title: "百色sop生产环境admin",
+            href: { url: "https://bspolice.runjian.com:23011/admin" },
+          },
+          {
+            title: "河池sop生产环境isv",
+            href: { url: "https://hcpolice.runjian.com:23011/isv" },
+          },
+          {
+            title: "河池sop生产环境admin",
+            href: { url: "https://hcpolice.runjian.com:23011/admin" },
+          },
+          {
+            title: "jenkins",
+            href: { url: "https://ga-jenkins.runjian.com:19000/" },
+          },
+          {
+            title: "文件云nextcloud",
+            href: { url: "https://ga-nextcloud.runjian.com:19000/" },
+          },
+        ],
+      },
+      {
+        title: "河池水洞社区",
+        menus: [
+          {
+            title: "河池开发环境",
+            href: { url: "https://hcpolice.runjian.com:15002/" },
+          },
+          {
+            title: "演示环境",
+            href: { url: "https://ga-collect-zhsq-uat.runjian.com:19000/" },
+          },
+        ],
+      },
+      {
+        title: "涉案停车场",
+        menus: [
+          {
+            title: "开发环境",
+            href: { url: "https://yq.runjian.com:19933" },
+          },
+          {
+            title: "演示环境",
+            href: { url: "https://ga-sacldj-uat.runjian.com:19000/" },
+          },
+        ],
+      },
+      {
+        title: "检查站",
+        menus: [
+          {
+            title: "百色生产环境",
+            href: { url: "https://bspolice.runjian.com:15005/" },
+          },
+          {
+            title: "河池生产环境",
+            href: { url: "https://hcpolice.runjian.com:15005/" },
+          },
+        ],
+      },
+      {
+        title: "治安要素采集平台",
+        href: "",
+        menus: [
+          {
+            title: "演示环境",
+            href: { url: "https://ga-collect-uat.runjian.com:19000/" },
+          },
+        ],
+      },
+      {
+        title: "智慧社区",
+        href: "",
+        menus: [
+          {
+            title: "测试环境",
+            href: { url: "https://ga-community-test.runjian.com:19000" },
+          },
+        ],
+      },
+    ]
+    var ele = document.querySelector("#circle-menu1")
+    var bk = document.querySelector(".biankuang")
+    let Num = (document.body.offsetWidth / 1920) * 690 || (document.body.offsetWidth / 2560) * 900
+    let Num1 = (document.body.offsetWidth / 1920) * 500 || (document.body.offsetWidth / 2560) * 660
+    bk.style.width = Num1 + "px"
+    bk.style.height = Num1 + "px"
+    var cmenu = CMenu(ele).config({
+      totalAngle: 360, //deg,
+      spaceDeg: 1.5, //deg 间隔
+      background: "#17396e", // 导航背景色
+      backgroundHover: "#2698F8", // 导航鼠标移入时的背景色
+      pageBackground: "transparent", //边框
+      percent: 0.55, //% 高
+      diameter: Num, //px 整体的大小
+      horizontal: true,
+      start: -45, //deg
+      animation: "into",
+      menus: menuss,
+    })
+
+    // 显示导航的时间
+    setTimeout(function () {
+      cmenu
+        .styles({
+          //top: '200px',
+          //left: '600px'
+        })
+        .show()
+    }, 150)
+  </script>
+</body>
+
+</html>
