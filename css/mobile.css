@@ -1,0 +1,53 @@
+.share {
+    /* background-color: rgb(192, 220, 251) !important; 
+    color: rgb(210, 251, 182) !important; */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 复制链接按钮 */
+.wrapper {
+  display: block;
+  position: absolute;
+  top: 44%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+}
+.btn {
+  padding: 0.18em 0.5em;
+  text-align: center;
+  text-decoration: none;
+  color: #ddf0ff;
+  border: 2px solid #cce7fd;
+  font-size: 1.4rem;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.btn:before {
+  content: "";
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+.btn:hover {
+  background-color: #2194E0;
+  color: #fff;
+  border-bottom: 4px solid darken(#2194E0, 10%);
+}
+.btn:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+.tips{
+    font-size: 0.8rem;
+    margin-left: 3.5%;
+}

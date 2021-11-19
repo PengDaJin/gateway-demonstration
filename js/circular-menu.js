@@ -526,9 +526,9 @@
 
     };
 
-    const sizeRatio$1 = 5 / 3.8;// 子导航与母导航的距离
-    const percentRatio = 0.55; // 子导航大小
-    const centralDegRatio = 0.718;
+    const sizeRatio$1 = 5 / 3.9;// 子导航与母导航的距离
+    const percentRatio = 0.58; // 子导航高度
+    const centralDegRatio = 0.54; // 子导航宽度
 
 
     function createSubMenu(creator, menus, index) {
